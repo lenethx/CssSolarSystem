@@ -1,0 +1,1079 @@
+body{
+    background-color: rgb(19, 14, 49);
+    overflow-x: hidden;
+}
+
+
+
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 90px ;
+    color: white;
+    text-shadow: 0px 0px 5px white;
+}
+
+.nottoscale{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px ;
+    transform: translate(200px, -20px);
+    text-shadow: 0px 0px 3px white;
+
+}
+
+
+
+#ssys{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 600px;
+    height: 600px;
+    position:sticky;
+
+}
+
+/*-------------Tooltips-------------*/
+.pinfo{
+    position: relative;
+    display: none;
+
+    max-height: 200px;
+    width: 160px;
+    border-color: oldlace;
+    border-width: 2px;
+    border-radius: 3px;
+    transform: translate(10px 10px);
+    background-color: rgba(255, 255, 255, 0.1);
+    overflow: auto;
+    z-index: 100;
+    box-shadow:  0 0 5px  white;
+
+}
+
+.pinfo::-webkit-scrollbar{
+    width: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.pinfo::-webkit-scrollbar-thumb{
+    background: rgba(255, 255, 255, 0.4);;
+}
+
+
+.pinfo p{
+    color: white;
+    font-size: 12px;
+    display:block;
+    text-align: justify;
+
+    margin: 5px;
+
+    
+}
+
+.pinfo h6{
+    color:white;
+    text-align: center;
+
+}
+
+div:hover > .pinfo { display: block;    }
+div:hover ~ .pinfo { display: none;    }
+
+div:hover{
+    animation-play-state: paused;
+}
+
+.pinfo img{
+    max-height: 100px;
+    max-width: 100px;
+    margin: 1px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+/* --------------SOL --------------*/
+
+.sun{
+    position: absolute;
+    margin: 250px;
+	width: 35px;
+	height: 35px;
+	border: 1px solid lightgoldenrodyellow;
+	border-radius: 50%;
+    background-color: lightgoldenrodyellow;
+
+    box-shadow:  0 0 40px  lightgoldenrodyellow;
+
+}
+
+
+/* --------------PLANETAS--------------------*/
+
+
+
+.mercury-y {
+
+
+    animation: mercury-r-y 5s;
+    position:absolute;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    
+}
+.mercury {
+	position: relative;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+    background-color: rgb(165, 165, 165);
+    animation: mercury-r-x 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 1.25s;
+    box-shadow:  0 0 6px  rgb(165, 165, 165);
+} 
+@keyframes mercury-r-y{
+    0%{transform: translateY(-50px);}
+    50%{transform: translateY(50px);}    
+    100%{transform: translateY(-50px);}}
+@keyframes mercury-r-x{
+    0%{transform: translateX(-50px);}
+    50%{transform: translateX(50px);}
+    100%{transform: translateX(-50px);}}
+
+
+
+.venus-y {
+    position: absolute;
+    animation: venus-r-y 11s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.venus {
+    position: relative;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: rgb(255, 174, 137);
+    animation: venus-r-x 11s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 2.75s;
+    box-shadow:  0 0 13px  rgb(255, 174, 137);
+} 
+@keyframes venus-r-y{
+    0%{transform: translateY(-75px);}
+    50%{transform: translateY(75px);}    
+    100%{transform: translateY(-75px);}}
+@keyframes venus-r-x{
+    0%{transform: translateX(-75px);}
+    50%{transform: translateX(75px);}
+    100%{transform: translateX(-75px);}}
+
+
+
+.earth-y {
+    position: absolute;
+    animation: earth-r-y 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.earth {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(148, 168, 255);
+    animation: earth-r-x 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 5s;
+    box-shadow:  0 0 17px  rgb(148, 168, 255);
+} 
+@keyframes earth-r-y{
+    0%{transform: translateY(-100px);}
+    50%{transform: translateY(100px);}    
+    100%{transform: translateY(-100px);}}
+@keyframes earth-r-x{
+    0%{transform: translateX(-100px);}
+    50%{transform: translateX(100px);}
+    100%{transform: translateX(-100px);}}
+
+    
+
+
+.mars-y {
+    position: absolute;
+    animation: mars-r-y 28s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.mars {
+    position: relative;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: rgb(255, 106, 68);
+    animation: mars-r-x 28s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 7s;
+    box-shadow:  0 0 11px  rgb(255, 106, 68);
+} 
+@keyframes mars-r-y{
+    0%{transform: translateY(-130px);}
+    50%{transform: translateY(130px);}    
+    100%{transform: translateY(-130px);}}
+@keyframes mars-r-x{
+    0%{transform: translateX(-130px);}
+    50%{transform: translateX(130px);}
+    100%{transform: translateX(-130px);}}
+
+        
+.jupiter-y {
+    position: absolute;
+    animation: jupiter-r-y 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.jupiter {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(255, 188, 112);
+    animation: jupiter-r-x 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 10s;
+    box-shadow:  0 0 8px  rgb(255, 188, 112);
+} 
+@keyframes jupiter-r-y{
+    0%{transform: translateY(-220px);}
+    50%{transform: translateY(220px);}    
+    100%{transform: translateY(-220px);}}
+@keyframes jupiter-r-x{
+    0%{transform: translateX(-220px);}
+    50%{transform: translateX(220px);}
+    100%{transform: translateX(-220px);}}
+
+
+
+.saturn-y {
+    position: absolute;
+    animation: saturn-r-y 48s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.saturn {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(226, 214, 179);
+    animation: saturn-r-x 48s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 12s;
+    box-shadow:  0 0 7px  rgb(226, 214, 179);
+} 
+@keyframes saturn-r-y{
+    0%{transform: translateY(-260px);}
+    50%{transform: translateY(260px);}    
+    100%{transform: translateY(-260px);}}
+@keyframes saturn-r-x{
+    0%{transform: translateX(-260px);}
+    50%{transform: translateX(260px);}
+    100%{transform: translateX(-260px);}}
+
+
+
+
+.uranus-y {
+    position: absolute;
+    animation: uranus-r-y 56s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.uranus {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: rgb(87, 216, 255);
+    animation: uranus-r-x 56s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 14s;
+    box-shadow:  0 0 7px  rgb(87, 216, 255);
+} 
+@keyframes uranus-r-y{
+    0%{transform: translateY(-300px);}
+    50%{transform: translateY(300px);}    
+    100%{transform: translateY(-300px);}}
+@keyframes uranus-r-x{
+    0%{transform: translateX(-300px);}
+    50%{transform: translateX(300px);}
+    100%{transform: translateX(-300px);}}
+
+
+
+
+.neptune-y {
+    position: absolute;
+    animation: neptune-r-y 64s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.neptune {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: rgb(68, 134, 255);
+    animation: neptune-r-x 64s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 16s;
+    box-shadow:  0 0 8px rgb(68, 134, 255);
+} 
+@keyframes neptune-r-y{
+    0%{transform: translateY(-330px);}
+    50%{transform: translateY(330px);}    
+    100%{transform: translateY(-330px);}}
+@keyframes neptune-r-x{
+    0%{transform: translateX(-330px);}
+    50%{transform: translateX(330px);}
+    100%{transform: translateX(-330px);}}
+
+/* --------------Dwarf Planets--------------------*/
+
+
+.pluto-y {
+    animation: pluto-r-y 80s;
+    position:absolute;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    
+}
+.pluto {
+	position: relative;
+	width: 3px;
+	height: 3px;
+	border-radius: 50%;
+    background-color: rgb(182, 175, 169);
+    animation: pluto-r-x 80s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 17s;
+    box-shadow:  0 0 6px  rgb(165, 165, 165);
+} 
+@keyframes pluto-r-y{
+    0%{transform: translateY(-345px);}
+    50%{transform: translateY(345px);}    
+    100%{transform: translateY(-345px);}}
+@keyframes pluto-r-x{
+    0%{transform: translateX(-345px);}
+    50%{transform: translateX(345px);}
+    100%{transform: translateX(-345px);}}
+
+
+
+
+.ceres-y {
+    position: absolute;
+    animation: ceres-r-y 33s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.ceres {
+    position: relative;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    animation: ceres-r-x 33s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 7.8s;
+    box-shadow:  0 0 20px  rgb(255, 255, 255);
+} 
+@keyframes ceres-r-y{
+    0%{transform: translateY(-160px);}
+    50%{transform: translateY(160px);}    
+    100%{transform: translateY(-160px);}}
+@keyframes ceres-r-x{
+    0%{transform: translateX(-160px);}
+    50%{transform: translateX(160px);}
+    100%{transform: translateX(-160px);}}
+
+
+
+.haumea-y {
+    animation: haumea-r-y 100s;
+    position:absolute;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.haumea {
+    position: relative;
+    width: 3px;
+    height: 1.5px;
+    border-radius: 50%;
+    background-color: rgb(182, 175, 169);
+    animation: haumea-r-x 100s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 28s;
+    box-shadow:  0 0 3px  rgb(165, 165, 165);
+} 
+@keyframes haumea-r-y{
+    0%{transform: translateY(-365px);}
+    50%{transform: translateY(365px);}    
+    100%{transform: translateY(-365px);}}
+@keyframes haumea-r-x{
+    0%{transform: translateX(-365px);}
+    50%{transform: translateX(365px);}
+    100%{transform: translateX(-365px);}}
+
+
+
+.makemake-y {
+    animation: makemake-r-y 100s;
+    position:absolute;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.makemake {
+    position: relative;
+    width: 2.5px;
+    height: 2.5px;
+    border-radius: 50%;
+    background-color: rgb(197, 139, 132);
+    animation: makemake-r-x 100s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 22s;
+    box-shadow:  0 0 3px  rgb(197, 139, 132);
+} 
+@keyframes makemake-r-y{
+    0%{transform: translateY(-375px);}
+    50%{transform: translateY(375px);}    
+    100%{transform: translateY(-375px);}}
+@keyframes makemake-r-x{
+    0%{transform: translateX(-375px);}
+    50%{transform: translateX(375px);}
+    100%{transform: translateX(-375px);}}
+
+
+
+
+.eris-y {
+    animation: eris-r-y 150s;
+    position:absolute;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.eris {
+    position: relative;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: rgb(179, 179, 179);
+    animation: eris-r-x 150s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 30s;
+    box-shadow:  0 0 3px  rgb(206, 206, 206);
+} 
+@keyframes eris-r-y{
+    0%{transform: translateY(-420px);}
+    50%{transform: translateY(420px);}    
+    100%{transform: translateY(-420px);}}
+@keyframes eris-r-x{
+    0%{transform: translateX(-420px);}
+    50%{transform: translateX(420px);}
+    100%{transform: translateX(-420px);}}
+
+    
+/*----------------Satellites----------------*/
+/*-----------Earth-----------*/
+.moon-y {
+    animation: moon-r-y 1.5s;
+    position:relative;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.moon {
+    margin: 0 auto;
+	position: relative;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+    background-color: rgb(209, 209, 209);
+    animation: moon-r-x 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 0.395s;
+    box-shadow:  0 0 3px  rgb(209, 209, 209);
+} 
+@keyframes moon-r-y{
+    0%{transform: translateY(-14px);}
+    50%{transform: translateY(14px);}    
+    100%{transform: translateY(-14px);}}
+@keyframes moon-r-x{
+    0%{transform: translateX(-14px);}
+    50%{transform: translateX(14px);}
+    100%{transform: translateX(-14px);}}
+
+
+/*-----------Rings-----------*/
+
+.rings {
+    margin: 0 auto;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border:white /*solid 5px*/;
+    box-shadow:  0 0 8px  rgb(226, 214, 179);
+    transform: rotate3d(5, -2, 0, 60deg) translate(-11px,-34px);
+}
+
+.jrings {
+    margin: 0 auto;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border:white ;
+    box-shadow:  0 0 1.7px  rgb(255, 255, 255);
+    transform: rotate3d(-2, 5, 0, 60deg) translate(-13px,-23px);
+}
+
+
+/*-----------Mars-----------*/
+.phobos-y {
+    animation: phobos-r-y 1s;
+    position:relative;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.phobos {
+    margin: 0 auto;
+	position: relative;
+	width: 3px;
+	height: 3px;
+	border-radius: 50%;
+    background-color: rgba(209, 209, 209, 0.5);
+    animation: phobos-r-x 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 0.25s;
+    box-shadow:  0 0 3px  rgba(209, 209, 209, 0.5);
+} 
+@keyframes phobos-r-y{
+    0%{transform: translateY(-9px);}
+    50%{transform: translateY(9px);}    
+    100%{transform: translateY(-9px);}}
+@keyframes phobos-r-x{
+    0%{transform: translateX(-9px);}
+    50%{transform: translateX(9px);}
+    100%{transform: translateX(-9px);}}
+
+
+
+.deimos-y {
+    animation: deimos-r-y 4s;
+    position:relative;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.deimos {
+    margin: 0 auto;
+    position: relative;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: rgba(255, 175, 71, 0.5);
+    animation: deimos-r-x 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 1s;
+    box-shadow:  0 0 3px  rgba(255, 175, 71, 0.5);
+} 
+@keyframes deimos-r-y{
+    0%{transform: translateY(-12px);}
+    50%{transform: translateY(12px);}    
+    100%{transform: translateY(-12px);}}
+@keyframes deimos-r-x{
+    0%{transform: translateX(-12px);}
+    50%{transform: translateX(12px);}
+    100%{transform: translateX(-12px);}}
+
+
+
+
+/*-----------Jupiter-----------*/
+.io-y {
+    animation: io-r-y 1.5s;
+    position:relative;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.io {
+    margin: 0 auto;
+    position: relative;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: rgb(253, 223, 125);
+    animation: io-r-x 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 0.395s;
+    box-shadow:  0 0 3px  rgb(253, 223, 125);
+} 
+@keyframes io-r-y{
+    0%{transform: translateY(-9px);}
+    50%{transform: translateY(28px);}    
+    100%{transform: translateY(-9px);}}
+@keyframes io-r-x{
+    0%{transform: translateX(-16px);}
+    50%{transform: translateX(16px);}
+    100%{transform: translateX(-16px);}}
+
+
+
+.europa-y {
+    animation: europa-r-y 3s;
+    position:relative;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.europa {
+    margin: 0 auto;
+    position: relative;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: rgb(209, 229, 248);
+    animation: europa-r-x 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 0.75s;
+    box-shadow:  0 0 3px  rgb(209, 229, 248);
+} 
+@keyframes europa-r-y{
+    0%{transform: translateY(-15px);}
+    50%{transform: translateY(29px);}    
+    100%{transform: translateY(-15px);}}
+@keyframes europa-r-x{
+    0%{transform: translateX(-24px);}
+    50%{transform: translateX(24px);}
+    100%{transform: translateX(-24px);}}
+
+
+.ganymede-y {
+    animation: ganymede-r-y 5s;
+    position:relative;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.ganymede {
+    margin: 0 auto;
+    position: relative;
+    width: 5.2px;
+    height: 5.2px;
+    border-radius: 50%;
+    background-color: rgb(120, 139, 127);
+    animation: ganymede-r-x 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 1.25s;
+    box-shadow:  0 0 4px  rgb(120, 139, 127);
+} 
+@keyframes ganymede-r-y{
+    0%{transform: translateY(-23px);}
+    50%{transform: translateY(29px);}    
+    100%{transform: translateY(-23px);}}
+@keyframes ganymede-r-x{
+    0%{transform: translateX(-28px);}
+    50%{transform: translateX(28px);}
+    100%{transform: translateX(-28px);}}
+
+
+
+.callisto-y {
+    animation: callisto-r-y 8s;
+    position:relative;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.callisto {
+    margin: 0 auto;
+    position: relative;
+    width: 4.8px;
+    height: 4.8px;
+    border-radius: 50%;
+    background-color: rgb(214, 193, 175);
+    animation: callisto-r-x 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 2s;
+    box-shadow:  0 0 3px  rgb(214, 193, 175);
+} 
+@keyframes callisto-r-y{
+    0%{transform: translateY(-29px);}
+    50%{transform: translateY(29px);}    
+    100%{transform: translateY(-29px);}}
+@keyframes callisto-r-x{
+    0%{transform: translateX(-29px);}
+    50%{transform: translateX(29px);}
+    100%{transform: translateX(-29px);}}
+
+
+
+/*-----------Saturn-----------*/
+.titan-y {
+    animation: titan-r-y 12s;
+    position:relative;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.titan {
+    margin: 0 auto;
+    position: relative;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: rgb(255, 216, 132);
+    animation: titan-r-x 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 3s;
+    box-shadow:  0 0 3px  rgb(255, 216, 132);
+} 
+@keyframes titan-r-y{
+    0%{transform: translateY(-28px);}
+    50%{transform: translateY(28px);}    
+    100%{transform: translateY(-28px);}}
+@keyframes titan-r-x{
+    0%{transform: translateX(-28px);}
+    50%{transform: translateX(28px);}
+    100%{transform: translateX(-28px);}}
+
+
+
+.rhea-y {
+    animation: rhea-r-y 8s;
+    position:relative;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.rhea {
+    margin: 0 auto;
+    position: relative;
+    width: 2.5px;
+    height: 2.5px;
+    border-radius: 50%;
+    background-color: rgb(179, 179, 179);
+    animation: rhea-r-x 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 2s;
+    box-shadow:  0 0 3px  rgb(179, 179, 179);
+} 
+@keyframes rhea-r-y{
+    0%{transform: translateY(-24px);}
+    50%{transform: translateY(24px);}    
+    100%{transform: translateY(-24px);}}
+@keyframes rhea-r-x{
+    0%{transform: translateX(-24px);}
+    50%{transform: translateX(24px);}
+    100%{transform: translateX(-24px);}}
+
+
+
+.iapetus-y {
+    animation: iapetus-r-y 20s;
+    position:relative;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.iapetus {
+    margin: 0 auto;
+    position: relative;
+    width: 2.4px;
+    height: 2.4px;
+    border-radius: 50%;
+    background-color: rgb(180, 173, 152);
+    animation: iapetus-r-x 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 5s;
+    box-shadow:  0 0 3px  rgb(180, 173, 152);
+} 
+@keyframes iapetus-r-y{
+    0%{transform: translateY(-32px);}
+    50%{transform: translateY(32px);}    
+    100%{transform: translateY(-32px);}}
+@keyframes iapetus-r-x{
+    0%{transform: translateX(-32px);}
+    50%{transform: translateX(32px);}
+    100%{transform: translateX(-32px);}}
+
+
+
+.dione-y {
+    animation: dione-r-y 5s;
+    position:relative;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.dione {
+    margin: 0 auto;
+    position: relative;
+    width: 2.1px;
+    height: 2.1px;
+    border-radius: 50%;
+    background-color: rgb(206, 206, 206);
+    animation: dione-r-x 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 1.25s;
+    box-shadow:  0 0 3px  rgb(206, 206, 206);
+} 
+@keyframes dione-r-y{
+    0%{transform: translateY(-20px);}
+    50%{transform: translateY(20px);}    
+    100%{transform: translateY(-20px);}}
+@keyframes dione-r-x{
+    0%{transform: translateX(-20px);}
+    50%{transform: translateX(20px);}
+    100%{transform: translateX(-20px);}}
+
+
+
+.tethys-y {
+    animation: tethys-r-y 3s;
+    position:relative;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.tethys {
+    margin: 0 auto;
+    position: relative;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: rgb(214, 193, 175);
+    animation: tethys-r-x 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 0.75s;
+    box-shadow:  0 0 3px  rgb(214, 193, 175);
+} 
+@keyframes tethys-r-y{
+    0%{transform: translateY(-16px);}
+    50%{transform: translateY(16px);}    
+    100%{transform: translateY(-16px);}}
+@keyframes tethys-r-x{
+    0%{transform: translateX(-16px);}
+    50%{transform: translateX(16px);}
+    100%{transform: translateX(-16px);}}
+
+
+
+
+/*-----------Uranus-----------*/
+
+.ariel-y {
+    animation: ariel-r-y 3s;
+    position:relative;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.ariel {
+    margin: 0 auto;
+    position: relative;
+    width: 2.1px;
+    height: 2.1px;
+    border-radius: 50%;
+    background-color: rgb(219, 187, 172);
+    animation: ariel-r-x 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 0.75s;
+    box-shadow:  0 0 3px  rgb(219, 187, 172);
+} 
+@keyframes ariel-r-y{
+    0%{transform: translateY(-8px);}
+    50%{transform: translateY(18px);}    
+    100%{transform: translateY(-8px);}}
+@keyframes ariel-r-x{
+    0%{transform: translateX(-13px);}
+    50%{transform: translateX(13px);}
+    100%{transform: translateX(-13px);}}
+
+
+
+.umbriel-y {
+    animation: umbriel-r-y 5s;
+    position:relative;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.umbriel {
+    margin: 0 auto;
+    position: relative;
+    width: 2.1px;
+    height: 2.1px;
+    border-radius: 50%;
+    background-color: rgb(172, 177, 219);
+    animation: umbriel-r-x 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 1.25s;
+    box-shadow:  0 0 3px  rgb(172, 177, 219);
+} 
+@keyframes umbriel-r-y{
+    0%{transform: translateY(-13px);}
+    50%{transform: translateY(19px);}    
+    100%{transform: translateY(-13px);}}
+@keyframes umbriel-r-x{
+    0%{transform: translateX(-16px);}
+    50%{transform: translateX(16px);}
+    100%{transform: translateX(-16px);}}
+
+
+
+.titania-y {
+    animation: titania-r-y 8s;
+    position:relative;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.titania {
+    margin: 0 auto;
+    position: relative;
+    width: 2.6px;
+    height: 2.6px;
+    border-radius: 50%;
+    background-color: rgb(146, 109, 115);
+    animation: titania-r-x 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 2s;
+    box-shadow:  0 0 3px  rgb(219, 172, 178);
+} 
+@keyframes titania-r-y{
+    0%{transform: translateY(-20px);}
+    50%{transform: translateY(20px);}    
+    100%{transform: translateY(-20px);}}
+@keyframes titania-r-x{
+    0%{transform: translateX(-20px);}
+    50%{transform: translateX(20px);}
+    100%{transform: translateX(-20px);}}
+
+
+
+
+.oberon-y {
+    animation: oberon-r-y 12s;
+    position:relative;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.oberon {
+    margin: 0 auto;
+    position: relative;
+    width: 2.5px;
+    height: 2.5px;
+    border-radius: 50%;
+    background-color: rgb(156, 156, 156);
+    animation: oberon-r-x 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 3s;
+    box-shadow:  0 0 3px  rgb(216, 216, 216);
+} 
+@keyframes oberon-r-y{
+    0%{transform: translateY(-23px);}
+    50%{transform: translateY(23px);}    
+    100%{transform: translateY(-23px);}}
+@keyframes oberon-r-x{
+    0%{transform: translateX(-23px);}
+    50%{transform: translateX(23px);}
+    100%{transform: translateX(-23px);}}
+
+
+    
+/*-----------Neptune-----------*/
+
+
+.triton-y {
+    animation: triton-r-y 4.4s;
+    position:relative;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.triton {
+    margin: 0 auto;
+    position: relative;
+    width: 3.5px;
+    height: 3.5px;
+    border-radius: 50%;
+    background-color: rgb(199, 199, 199);
+    animation: triton-r-x 4.4s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 1.1s;
+    box-shadow:  0 0 3px  rgb(216, 216, 216);
+} 
+@keyframes triton-r-y{
+    0%{transform: translateY(17px);}
+    50%{transform: translateY(-9px);}    
+    100%{transform: translateY(17px);}}
+@keyframes triton-r-x{
+    0%{transform: translateX(-13px);}
+    50%{transform: translateX(13px);}
+    100%{transform: translateX(-13px);}}
+
+
+/*-----------Pluto-----------*/
+
+
+.charon-y {
+    animation: charon-r-y 4s;
+    position:relative;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+.charon {
+    margin: 0 auto;
+    position: relative;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: rgba(224, 209, 194, 0.5);
+    animation: charon-r-x 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-delay: 1s;
+    box-shadow:  0 0 3px  rgb(209, 209, 209,);
+} 
+@keyframes charon-r-y{
+    0%{transform: translateY(-6px);}
+    50%{transform: translateY(6px);}    
+    100%{transform: translateY(-6px);}}
+@keyframes charon-r-x{
+    0%{transform: translateX(-6px);}
+    50%{transform: translateX(6px);}
+    100%{transform: translateX(-6px);}}

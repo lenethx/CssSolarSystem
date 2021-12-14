@@ -1,0 +1,37 @@
+h2{
+    font-family: sans-serif;
+    font-size: 40px ;
+    color: white;
+    text-shadow: 0px 0px 5px white;
+}
+
+p{
+    color: white;
+    font-size: 20px;
+    display:block;
+    text-align: justify;
+
+    margin: 5px;
+    text-shadow: 0px 0px 1px white;
+    display: block;
+    max-width: 50%;
+}
+
+body{
+    background-color: rgb(19, 14, 49);
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sysr{
+    align-self: flex-start;
+}
+nav{
+    align-self: flex-start;
+}
+.sysl{
+    align-self: flex-end;
+}
