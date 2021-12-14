@@ -45,7 +45,7 @@ for(var juampi = 0; juampi<300; juampi++){
             100%{transform: translateX(-` + asteroiddistance.toString() + `px);}}
     `;
     
-    console.log(asteroidhtml)
+    //console.log(asteroidhtml)
     document.getElementById("ssys").innerHTML += asteroidhtml;
 
     var element = document.getElementById("ssys2");
