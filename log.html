@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function findLogFunc(oldmin,newmin,oldmax,newmax, astext=false){
+    scale=newmax/newmin;
+    factor1=Math.pow(oldmax/Math.pow(oldmin,scale), 1/(scale-1));
+
+    factor2=newmin/Math.log(factor1*oldmin);
+
+    return astext ? `${factor2}*Math.log(${factor1}*number):: ${oldmin}: ${factor2*Math.log(factor1*oldmin)},  ${oldmax}: ${factor2*Math.log(factor1*oldmax)}` : function(inputvar2){ return factor2*Math.log(factor1*inputvar2);};
+}
+
+//function cle(factor, factor2 ){
+//return "90: "+factor2*Math.log(factor*90)+", 90000: "+factor2*Math.log(factor*90000)+", scale: "+(factor2*Math.log(factor*90000))/(factor2*Math.log(factor*90));
+//}
+
+
+
+
+
+    </script>
+</body>
+</html>
