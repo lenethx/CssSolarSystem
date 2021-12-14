@@ -31,7 +31,7 @@ for(var juampi = 0; juampi<300; juampi++){
             animation: asteroid-r-x`+ juampi.toString() +` ` + asteroidtime.toString() + `s;
             animation-iteration-count: infinite;
             animation-timing-function:ease-in-out;
-            animation-delay: ` + (asteroidtime/4+asteroiddelay).toString() + `s;
+            animation-delay: ` + (asteroidtime/16+asteroiddelay).toString() + `s;
             box-shadow:  0 0 3px  rgb(50, 255, 255);
         }
 
